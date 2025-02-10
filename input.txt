@@ -1,0 +1,47 @@
+drive {
+    play "slant" {
+        setup {
+            quarterback: "QB1";
+            receiver: "WR1";
+        }
+        execute {
+            pass("QB1", "WR1", 40, "left");
+        }
+        fieldposition {
+            ball: 0
+            clock: "1:40"
+            redzone: false
+            endzone: false
+        }
+    }
+    play "run" {
+        setup {
+            quarterback: "QB1";
+            runningback: "RB1";
+        }
+        execute {
+            run("QB1", "RB1", 5);
+        }
+        fieldposition {
+            ball: 40
+            clock: "1:20"
+            redzone: false
+            endzone: true
+        }
+    }
+    play "vertical" {
+        setup {
+            quarterback: "QB1";
+            receiver: "WR2";
+        }
+        execute {
+            pass("QB1", "WR2", 61, "right");
+        }
+        fieldposition {
+            ball: 45
+            clock: "1:15"
+            redzone: false
+            endzone: true
+        }
+    }
+}
